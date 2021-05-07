@@ -104,3 +104,15 @@ footer {
       padding: 50px;
       width: 100%;
   }
+
+  .left-column {
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+  }
+  
+  .right-column {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+  }
