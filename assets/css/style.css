@@ -22,7 +22,7 @@
   body {
     color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     max-width: 100%;
   }
 
@@ -57,7 +57,7 @@
 
   header nav ul {
       display: inline-flex;
-      padding: 5px;
+      padding: 1.5vw;
       list-style: none;
   }
   
@@ -72,7 +72,7 @@
     background-image: url("https://images.pexels.com/photos/866351/pexels-photo-866351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 300px;
+    height: auto;
     width: auto;
     display: flex;
     justify-content: center;
@@ -91,32 +91,33 @@
   }
   
   section {
-    padding: 60px;
+    padding: 40px;
     display: flex;
   }
 
   .left-column {
-    width: 35%;
+    width: 25%;
     flex-wrap: wrap;
     text-align: right;
     padding: 0px 40px;
+    border-right: 3px solid var(--quaternary-color);
   }
   
   .right-column {
-    width: 65%;
+    width: 75%;
     flex-wrap: wrap;
-    border: 0px 3px 0px 0px solid black;
+    padding: 0px 40px;
   }
 
   .first-section p {
       padding: 0px 0px 0px 15px;
-      font-size: 1.70vw;
+      font-size: 1.4vw;
   }
 
-  .second-section {
+  /*.second-section {
       height: 1700px;
   }
-
+  */
   .big-image {
       position: relative;
   }
@@ -125,27 +126,23 @@
     height: auto;
     max-width: 100%;
     border: 3px solid var(--quaternary-color);
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
   }
 
   .small-images {
       display: flex;
-      height: 400px;
+      height: auto;
       flex-wrap: wrap;
+      justify-content: space-between;
   }
 
   .image-positioning {
     position: relative;
-    padding: 10px;
+    padding: 10px 0px;
     width: 50%;
   }
 
   .small-images img {
-    min-height: 420px;
+    min-height: 23vw;
     max-width: 100%;
     border: 3px solid var(--quaternary-color);
     background-size: contain;
@@ -155,15 +152,136 @@
     position: relative;
   }
 
+  .image-text {
+      font-size: 1.5vw;
+  }
+
   .small-images-runbuddy {
     padding: 40px;
   }
 
   .second-section article {
     position: absolute;
-    top: 80%;
+    top: 60%;
     background-color: var(--quaternary-color);
-    padding: 10px 20px 10px 50px;
+    padding: 1vw 2vw;
   }
+
+  #big-image-text {
+    top: 75%;  
+}
+
+  /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+      position: relative;
+    
+    }
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
+    }
+  
+    header nav ul li {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    footer h2, footer div {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .hero-cta, .hero-form {
+      width: 100%;
+    }
+    
+    .hero-cta {
+      text-align: center;
+    }
+  
+    .section-title {
+      width: 80%;
+    }
+    
+    .trainer {
+      flex: 0 70%;
+    }
+    
+    .contact-info iframe{
+      flex: 1 100%;
+    }
+  }
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 10px 35px 10px 0px;
+    }
+    
+    section {
+      padding: 30px 15px;
+    }
+  
+    .step h3 {
+      flex: 1 100%;
+      text-align: center;
+    }
+  
+    .step-info {
+      flex: 2 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .step-img {
+      flex: 0 32%;
+      margin-right: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .step-text {
+      flex: 100%;  
+    }
+  
+    .trainer-bio h3, .trainer-bio h4 {
+      display: block;
+    }
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .hero-form button {
+      width: 100%;
+    }
+  
+    .section-title {
+      width: 95%;
+    }
+  
+    .intro p {
+      width: 100%;
+    }
+  
+    .trainer {
+      flex: 0 100%;
+    }
+  
+    .contact-info {
+      text-align: center;
+    }
+  
+    .contact-info > * {
+      flex: 0 100%;
+    }
+  
+    .contact-form {
+      order: 3;
+    }
+  }
+  
 
 
